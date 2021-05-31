@@ -104,18 +104,21 @@ button {
 }
 /* omen bar */
 .omne_bar {
-  display: flex;
-  align-items: center;
   position: fixed;
   top: 0;
   background-color: #2a3643;
   width: 100%;
-  max-width: 1600px;
   margin: 0 auto;
+  z-index: 99;
+}
+.omne_bar .custom_container{
+  display: flex;
+  align-items: center;
+  max-width: 1600px;
   padding: 2rem;
   height: 60px;
   max-height: 60px;
-  z-index: 99;
+
 }
 .omne_bar img {
   max-width: 35%;
@@ -210,6 +213,7 @@ input[type="checkbox"] {
   text-transform: uppercase;
   margin-right: 15%;
   font-weight: 500;
+  cursor: pointer;
 }
 .secondary_nav_items .sn_item.active {
   color: #56a9ff;
@@ -390,4 +394,17 @@ input[type="checkbox"] {
   word-spacing: 1px;
   font-size: 16px;
   border: 1px dashed;
+}
+
+
+/* firefox media query */
+@-moz-document url-prefix() {
+  .scroll_docs{
+    min-height: calc(350px + 35px);
+    max-height: calc(350px + 35px);
+  }
+  .draggable_area{
+    min-height: calc(410px + 35px);
+    max-height: calc(410px + 35px);
+  }
 }
