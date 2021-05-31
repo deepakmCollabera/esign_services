@@ -111,7 +111,7 @@ button {
   margin: 0 auto;
   z-index: 99;
 }
-.omne_bar .custom_container{
+.omne_bar .custom_container {
   display: flex;
   align-items: center;
   max-width: 1600px;
@@ -246,7 +246,7 @@ input[type="checkbox"] {
   padding: 1.5rem;
   border-bottom: 1px solid #e7e7e7;
 }
-.sendOff_details h4 small{
+.sendOff_details h4 small {
   color: #4a4a4a;
   font-size: 14px;
   font-weight: 500;
@@ -298,7 +298,7 @@ input[type="checkbox"] {
   padding: 1.5rem;
   border-right: 1px solid #e7e7e7;
 }
-.onboard_docs h5{
+.onboard_docs h5 {
   margin-top: 0;
   margin-bottom: 1rem;
   display: flex;
@@ -307,13 +307,15 @@ input[type="checkbox"] {
   color: #56a9ff;
   font-size: 16px;
 }
-.onboard_docs h5 a{
+.onboard_docs h5 a {
   margin-left: auto;
   font-size: 14px;
   color: #56a9ff;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
-.docToggle_wrap a {
+.docToggle_wrap a.accordion-toggle {
   width: 100%;
   background-color: #2069c1;
   display: inline-block;
@@ -325,7 +327,7 @@ input[type="checkbox"] {
   text-decoration: none;
   position: relative;
 }
-.scroll_docs{
+.scroll_docs {
   min-height: 350px;
   max-height: 350px;
   overflow-y: auto;
@@ -334,25 +336,25 @@ input[type="checkbox"] {
   position: absolute;
   right: 1rem;
   top: 35%;
-  transition: all .5s;
+  transition: all 0.5s;
 }
-.docToggle_wrap{
+.docToggle_wrap {
   margin-bottom: 1rem;
 }
-.docToggle_wrap a.accordion-toggle.collapsed .doc_arrow svg *{
+.docToggle_wrap a.accordion-toggle.collapsed .doc_arrow svg * {
   fill: #ffffff !important;
 }
-.docToggle_wrap a.accordion-toggle.collapsed .doc_arrow svg{
+.docToggle_wrap a.accordion-toggle.collapsed .doc_arrow svg {
   transform: rotate(180deg) !important;
 }
-.docToggle_wrap a.accordion-toggle.collapsed .doc_arrow svg *{
+.docToggle_wrap a.accordion-toggle.collapsed .doc_arrow svg * {
   fill: #4a4a4a !important;
 }
-.docToggle_wrap a.accordion-toggle.collapsed{
+.docToggle_wrap a.accordion-toggle.collapsed {
   background-color: #e7e7e7;
   color: #4a4a4a;
 }
-.docToggle_wrap a.accordion-toggle .doc_arrow{
+.docToggle_wrap a.accordion-toggle .doc_arrow {
   transform: rotate(0deg) !important;
 }
 .docToggle_wrap > .accordion-body {
@@ -366,21 +368,93 @@ input[type="checkbox"] {
   color: #4a4a4a;
   margin-bottom: 1rem;
 }
-.draggable_doc.rejected_doc{
+.draggable_doc.rejected_doc {
   border: 2px solid #d0021b;
 }
-.docToggle_wrap .draggable_doc:last-child{
+.docToggle_wrap .draggable_doc:last-child {
   margin-bottom: 0;
 }
+/* rejected note  */
+.rejected_note {
+  position: relative;
+  cursor: pointer;
+}
+.rejected_note_wrap {
+  position: absolute;
+  width: max-content;
+  max-width: 330px;
+  right: -5px;
+  box-shadow: 0 -5px 16px 0 rgb(0 0 0 / 30%);
+  background-color: #ffffff;
+  top: 30px;
+  border-radius: 8px;
+  z-index: 9;
+  display: none;
+}
+.rejected_note_wrap.active {
+  display: block;
+}
+.rejected_note_wrap::before {
+  content: "";
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  top: -10px;
+  right: 10px;
+}
+.rejected_note_wrap .popup_header {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e7e7e7;
+}
+.rejected_note_wrap .popup_header h6 {
+  font-size: 12px;
+  color: #56a9ff;
+  font-weight: 500;
+  margin: 0;
+}
+.rejected_note_wrap .popup_header span {
+  margin-left: auto;
+  cursor: pointer;
+}
+.rejected_note_wrap .popup_body {
+  padding: 0.8rem 1rem;
+}
+.rejected_note_wrap .popup_body .rej_req_info {
+  margin-bottom: 0.8rem;
+  padding: 0 1.5rem;
+}
+.rejected_note_wrap .popup_body .rej_req_info:last-child {
+  margin-bottom: 0;
+}
+.rejected_note_wrap .popup_body .rej_req_info.border_left {
+  border-left: 1px solid #d8d8d8;
+}
+.rejected_note_wrap .popup_body .rej_req_info p {
+  font-size: 10px;
+  color: #4a4a4a;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.rejected_note_wrap .popup_body .rej_req_info small {
+  font-size: 9px;
+  color: #9b9b9b;
+  margin-bottom: 5px;
+}
+/* rejected note  */
+
 /* onboard_docs */
 
 /* draggable area */
-.draggable_area{
+.draggable_area {
   min-height: 410px;
   max-height: 410px;
   overflow-y: auto;
+  padding: 1.5rem;
 }
-.draggable_area .dragAreaText{
+.draggable_area .dragAreaText {
   margin: 0;
   width: 85%;
   position: absolute;
@@ -394,15 +468,303 @@ input[type="checkbox"] {
   font-size: 16px;
   border: 1px dashed;
 }
+.draggable_area .doc_num {
+  position: absolute;
+  right: 45px;
+  font-size: 11px;
+  font-weight: 400;
+  top: 5px;
+  border: 1px solid;
+  width: 18px;
+  text-align: center;
+  height: 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.draggable_area h5 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  color: #56a9ff;
+  font-size: 16px;
+}
+.draggable_area .scroll_docs {
+  max-height: unset;
+  overflow-y: unset;
+}
+.draggable_area .scroll_docs ~ .dragAreaText {
+  position: unset;
+  transform: unset;
+  margin: 0 auto;
+}
+span.selected_num {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 2rem;
+  color: #d0021b;
+  border: 1px solid;
+  height: 20px;
+  width: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.draggable_area .docToggle_wrap > a.accordion-toggle {
+  background-color: #56a9ff;
+}
+.draggable_area .docToggle_wrap > a.accordion-toggle.collapsed {
+  background-color: #e7e7e7;
+}
+.draggable_area .docToggle_wrap .dragged_doc_actions > a {
+  padding: 0 1rem;
+  text-decoration: none;
+}
+.draggable_area .selectedDoc_scroll {
+  max-height: 305px;
+  min-height: 305px;
+  overflow-y: auto;
+}
+.draggable_area .selectedDocsBtn_wrap {
+  text-align: right;
+  padding: 1rem 1rem 0;
+}
+.draggable_area .selectedDocsBtn_wrap button {
+  background-color: #56a9ff;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2px;
+}
+/* draggable area */
 
+/* Upload adhoc Docs */
+.custom_modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000008c;
+  z-index: 999;
+  display: none;
+}
+.custom_modal.active {
+  display: block;
+}
+.custom_modal_wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 4px;
+  width: 70%;
+}
+.custom_modal_header {
+  padding: 1rem;
+  border-bottom: 1px solid #979797;
+}
+.form-control{
+  border: none;
+  box-shadow: none;
+  padding: 1rem 0;
+}
+.form-control label{
+  color: #4a4a4a;
+    font-size: 10px;
+    font-weight: normal;
+    display: block;
+    text-transform: uppercase;
+}
+.form-control input, .form-control select{
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  border: solid 1px #e7e7e7;
+  background-color: #ffffff;
+  font-size: 12px;
+  color: #4a4a4a;
+  font-weight: normal;
+  padding: 6px 12px;
+  outline: none;
+}
+.custom_modal_body form{
+  margin: 0;
+}
+.modal-dialog {
+  width: 70%;
+  top: 10%;
+  transform: translate(0, -50%);
+}
+.close {
+  opacity: 1;
+}
+.modal-title {
+  color: #56a9ff;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+}
+.modal-content {
+  border-radius: 4px;
+}
+#upload_adhoc_docs .modal-body {
+  min-height: 400px;
+}
+.draganddrop {
+  position: absolute;
+  background-color: #f5f5f7;
+  z-index: 99;
+  padding: 2rem;
+  border: 2px dashed #b7b7b7;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.draganddrop input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  left: 0;
+  z-index: 99;
+  cursor: pointer;
+}
+.draganddrop > span {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 999;
+}
+.dragtext h2 {
+  font-size: 14px;
+  color: #b7b7b7;
+  font-weight: 400;
+  line-height: normal;
+}
+.dragtext button {
+  background-color: #56a9ff;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+}
+#upload_adhoc_docs .custom_modal_wrap{
+  max-width: 45%;
+}
+#upload_adhoc_docs .custom_modal_wrap {
+  max-width: 45%;
+}
+#upload_adhoc_docs .custom_modal_body {
+  padding: 1rem 1.5rem;
+}
+#upload_adhoc_docs .form-control{
+  display: flex;
+  height: auto;
+  align-items: center;
+}
+#upload_adhoc_docs .form-control label {
+  width: 30%;
+  margin: 0;
+}
+#upload_adhoc_docs .form-control select,
+#upload_adhoc_docs .form-control input {
+  width: 60%;
+  height: fit-content;
+}
+#upload_adhoc_docs .form-control.dropdown::after {
+  top: 45%;
+  right: 12%;
+}
+#upload_adhoc_docs .pos-relativ {
+  min-height: 150px;
+}
+#upload_adhoc_docs .documents_mainwrap {
+  margin: 1.5rem 0;
+  max-height: 100px;
+  overflow-y: auto;
+}
+#upload_adhoc_docs .doc_row{
+  display: flex;
+  background-color: #f2f5fa;
+  padding: 0.5rem 1rem;
+  font-size: 12px;
+  margin-bottom: 3px;
+  border-radius: 4px;
+}
+#upload_adhoc_docs .doc_row:last-child{
+  margin-bottom: 0;
+}
+#upload_adhoc_docs .doc_row .doc_type,
+#upload_adhoc_docs .doc_row .doc_title{
+  width: 30%;
+  font-size: 12px;
+  color: #4a4a4a;
+}
+#upload_adhoc_docs .doc_row .doc_date{
+  width: 25%;
+  font-size: 10px;
+  color: #4a4a4a;
+}
+#upload_adhoc_docs .doc_row .doc_title{
+  color: #56a9ff;
+}
+#upload_adhoc_docs .doc_row .doc_action{
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#upload_adhoc_docs .doc_row .doc_action img{
+  max-height: 18px;
+  cursor: pointer;
+}
+#upload_adhoc_docs .pos-relative{
+  min-height: 150px;
+}
+.btn_wrap_modal {
+  text-align: right;
+}
+.btn_wrap_modal .reset_btn {
+  border: 1px solid #4a90e2;
+  color: #56a9ff;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  margin-right: 15px;
+  padding: .5rem 1.2rem;
+  border-radius: 4px;
+  background-color: transparent;
+}
+.btn_wrap_modal .submit_btn {
+  border: none;
+  color: #fff;
+  background-color: #56a9ff;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  padding: .5rem 1.2rem;
+  border-radius: 4px;
+}
+/* Upload adhoc Docs */
 
 /* firefox media query */
 @-moz-document url-prefix() {
-  .scroll_docs{
+  .scroll_docs {
     min-height: calc(350px + 35px);
     max-height: calc(350px + 35px);
   }
-  .draggable_area{
+  .draggable_area {
     min-height: calc(410px + 35px);
     max-height: calc(410px + 35px);
   }
