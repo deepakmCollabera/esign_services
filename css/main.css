@@ -118,7 +118,6 @@ button {
   padding: 2rem;
   height: 60px;
   max-height: 60px;
-
 }
 .omne_bar img {
   max-width: 35%;
@@ -178,10 +177,10 @@ input[type="checkbox"] {
   padding: 1.3rem;
   display: inline-block;
 }
-.custom_container {
+.nav_menu .custom_container {
   height: 100%;
 }
-.custom_container > .row {
+.nav_menu .custom_container > .row {
   display: flex;
   align-items: center;
   height: 100%;
