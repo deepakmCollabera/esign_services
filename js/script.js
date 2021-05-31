@@ -16,16 +16,17 @@ $(document).ready(function(){
   })
 
   // profile_card_show
-  $(".profile_card_show").click(function(e){
+  // profile_card_show
+  $(".rejected_note").click(function(e){
     e.stopPropagation();
     e.preventDefault();
-    $(this).children(".profile_card").toggleClass("active");
-  })
+    $(this).children(".rejected_note_wrap").toggleClass("active");
+  });
 
-  $(".close_card").click(function(e){
+  $(".close_popup").click(function(e){
     e.stopPropagation();
     e.preventDefault();
-    $(this).parent(".profile_card").removeClass("active");
+    $(this).parent().parent(".rejected_note_wrap").removeClass("active");
   })
   
   $(".docs_mainwrap p, .info_table .accordion-toggle").click(function(e){
