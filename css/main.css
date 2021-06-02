@@ -468,7 +468,7 @@ input[type="checkbox"] {
   font-size: 16px;
   border: 1px dashed;
 }
-.draggable_area .doc_num {
+.docToggle_wrap .doc_num {
   position: absolute;
   right: 45px;
   font-size: 11px;
@@ -518,7 +518,7 @@ span.selected_num {
 .draggable_area .docToggle_wrap > a.accordion-toggle.collapsed {
   background-color: #e7e7e7;
 }
-.draggable_area .docToggle_wrap .dragged_doc_actions > a {
+.dragged_doc_actions > a {
   padding: 0 1rem;
   text-decoration: none;
 }
@@ -569,19 +569,20 @@ span.selected_num {
   padding: 1rem;
   border-bottom: 1px solid #979797;
 }
-.form-control{
+.form-control {
   border: none;
   box-shadow: none;
   padding: 1rem 0;
 }
-.form-control label{
+.form-control label {
   color: #4a4a4a;
-    font-size: 10px;
-    font-weight: normal;
-    display: block;
-    text-transform: uppercase;
+  font-size: 10px;
+  font-weight: normal;
+  display: block;
+  text-transform: uppercase;
 }
-.form-control input, .form-control select{
+.form-control input,
+.form-control select {
   width: 100%;
   display: block;
   border-radius: 4px;
@@ -593,7 +594,7 @@ span.selected_num {
   padding: 6px 12px;
   outline: none;
 }
-.custom_modal_body form{
+.custom_modal_body form {
   margin: 0;
 }
 .modal-dialog {
@@ -659,7 +660,7 @@ span.selected_num {
   padding: 0.4rem 1rem;
   border-radius: 4px;
 }
-#upload_adhoc_docs .custom_modal_wrap{
+#upload_adhoc_docs .custom_modal_wrap {
   max-width: 45%;
 }
 #upload_adhoc_docs .custom_modal_wrap {
@@ -668,7 +669,7 @@ span.selected_num {
 #upload_adhoc_docs .custom_modal_body {
   padding: 1rem 1.5rem;
 }
-#upload_adhoc_docs .form-control{
+#upload_adhoc_docs .form-control {
   display: flex;
   height: auto;
   align-items: center;
@@ -694,7 +695,7 @@ span.selected_num {
   max-height: 100px;
   overflow-y: auto;
 }
-#upload_adhoc_docs .doc_row{
+#upload_adhoc_docs .doc_row {
   display: flex;
   background-color: #f2f5fa;
   padding: 0.5rem 1rem;
@@ -702,34 +703,34 @@ span.selected_num {
   margin-bottom: 3px;
   border-radius: 4px;
 }
-#upload_adhoc_docs .doc_row:last-child{
+#upload_adhoc_docs .doc_row:last-child {
   margin-bottom: 0;
 }
 #upload_adhoc_docs .doc_row .doc_type,
-#upload_adhoc_docs .doc_row .doc_title{
+#upload_adhoc_docs .doc_row .doc_title {
   width: 30%;
   font-size: 12px;
   color: #4a4a4a;
 }
-#upload_adhoc_docs .doc_row .doc_date{
+#upload_adhoc_docs .doc_row .doc_date {
   width: 25%;
   font-size: 10px;
   color: #4a4a4a;
 }
-#upload_adhoc_docs .doc_row .doc_title{
+#upload_adhoc_docs .doc_row .doc_title {
   color: #56a9ff;
 }
-#upload_adhoc_docs .doc_row .doc_action{
+#upload_adhoc_docs .doc_row .doc_action {
   width: 15%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-#upload_adhoc_docs .doc_row .doc_action img{
+#upload_adhoc_docs .doc_row .doc_action img {
   max-height: 18px;
   cursor: pointer;
 }
-#upload_adhoc_docs .pos-relative{
+#upload_adhoc_docs .pos-relative {
   min-height: 150px;
 }
 .btn_wrap_modal {
@@ -742,7 +743,7 @@ span.selected_num {
   font-weight: 500;
   outline: none;
   margin-right: 15px;
-  padding: .5rem 1.2rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 4px;
   background-color: transparent;
 }
@@ -753,10 +754,264 @@ span.selected_num {
   font-size: 14px;
   font-weight: 500;
   outline: none;
-  padding: .5rem 1.2rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 4px;
 }
 /* Upload adhoc Docs */
+
+/* confirm modal */
+.confirmation_modal .custom_modal_wrap {
+  width: 35%;
+}
+.confirmation_modal .custom_modal_body {
+  padding: 2rem 1rem 2rem 2rem;
+}
+.confirmation_modal .custom_modal_body > h6 {
+  margin: 0 0 1rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4a4a4a;
+}
+.confirmation_modal .custom_modal_body .confirmation_btn {
+  text-align: right;
+}
+.confirmation_modal .custom_modal_body .confirmation_btn button {
+  background-color: transparent;
+  border: none;
+  color: #b7b7b7;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+}
+.confirmation_modal .custom_modal_body .confirmation_btn .confirm_btn {
+  color: #56a9ff;
+  margin-right: 0;
+}
+/* confirm modal */
+
+/* prepare to send */
+.pts_wrap.mt_wrap {
+  margin-top: 130px !important;
+  padding-bottom: 2rem;
+}
+.pts_head {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e7e7e7;
+}
+.pts_body {
+  margin: 1.5rem 2rem;
+  border: 1px solid #b7b7b7;
+  border-radius: 4px;
+}
+.pts_body .form_control {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e7e7e7;
+}
+.pts_body .form_control:last-child{
+  border-bottom: none;
+}
+.pts_form .form_control {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+}
+.pts_form .form_control.required label span {
+  color: #d0021b;
+  font-size: 16px;
+}
+.pts_form .form_control label {
+  width: 10%;
+  margin: 0;
+  color: #4a4a4a;
+  font-size: 12px;
+  font-weight: 400;
+}
+.pts_form .form_control .pts_input {
+  width: 25%;
+  border: 1px solid #e7e7e7;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+}
+.pts_form .form_control .pts_input input {
+  border: none;
+  width: -webkit-fill-available;
+  padding: 0.8rem 1rem;
+  outline: none;
+  font-weight: 400;
+  font-size: 14px;
+  color: #9b9b9b;
+  border-radius: 4px;
+}
+.pts_form .form_control .pts_input input::placeholder {
+  color: #9b9b9b;
+}
+.pts_form .form_control .pts_input .edit_sender {
+  padding: 0.5rem;
+  background-color: #f5f5f7;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.pts_form .pts_checkbox {
+  padding: 0 2rem;
+}
+.pts_form .pts_checkbox input {
+  height: 18px;
+  width: 18px;
+}
+.pts_form .form_control .form_ptsTag {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+}
+.pts_form .tags_form {
+  display: block !important;
+  position: relative;
+}
+.form_ptsTag .pts_input {
+  width: 80% !important;
+}
+.form_ptsTag .pts_input .pts_tagsWrap {
+  padding: 0.5rem 1rem;
+}
+.form_ptsTag .pts_input .pts_tagsWrap .pts_tag {
+  padding: 0.5rem 1rem;
+  background-color: #e7f2ff;
+  font-size: 12px;
+  border-radius: 30px;
+  color: #56a9ff;
+}
+.form_ptsTag .pts_input .pts_tagsWrap .pts_tag > span {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+.form_ptsTag .pts_input .pts_tagsWrap .pts_tag > span img {
+  width: 12px;
+}
+.pts_recipients {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translate(0, -50%);
+  display: inline-flex;
+  align-items: center;
+}
+.pts_recipients button {
+  margin-left: 1.5rem;
+  background-color: #56a9ff;
+  border: none;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.pts_radio_wrap {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.pts_radio {
+  display: inline-flex;
+  align-items: center;
+  margin: 1rem 1.5rem;
+}
+.pts_radio label {
+  width: auto !important;
+  margin-left: 1rem !important;
+  cursor: pointer;
+}
+.pts_sub {
+  width: 100% !important;
+}
+.pts_textarea {
+  align-items: self-start !important;
+}
+.pts_textarea .pts_input {
+  width: 100% !important;
+}
+.pts_textarea .pts_input textarea {
+  width: 100% !important;
+  border: none;
+  outline: none;
+  padding: 1.5rem;
+  border-radius: 4px;
+  resize: none;
+  overflow-y: auto;
+}
+.pts_selectedDocs{
+  margin: 2rem 3rem;
+  padding: 2rem 3rem;
+  border: 1px solid #b7b7b7;
+  border-radius: 4px;
+}
+.pts_selectedDocs h5 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  color: #56a9ff;
+  font-size: 16px;
+  margin-top: -3rem;
+    background-color: #fff;
+    width: fit-content;
+    margin-bottom: 2rem;
+    padding: 0 .5rem;
+}
+.pts_selectedDocs a.accordion-toggle{
+  background-color: #56a9ff;
+}
+.pts_footer{
+  padding: 0 3rem;
+}
+.pts_footer .pts_signature{
+  padding-bottom: 2rem;
+    border-bottom: 1px solid #b7b7b7;
+}
+.pts_footer .pts_signature p, .pts_footer .pts_footerText{
+  color: #4a4a4a;
+  font-size:14px;
+  margin-bottom: 2px;
+}
+.pts_footer .pts_signature h5{
+  color: #4a4a4a;
+  font-size:16px;
+  margin:0 0 2px;
+  font-weight: 700;
+}
+.pts_footer .pts_footerText{
+  padding: 2rem 0;
+}
+.pts_footer .pts_footerText b{
+  font-weight: 700;
+}
+.pts_footer .pts_footerText a{
+  font-weight: 700;
+  color: #56a9ff;
+}
+.pts_footer .pts_footerText{
+  font-size: 13px;
+}
+.pts_btnWrap{
+  padding: 1rem 2rem;
+}
+.pts_btnWrap button{
+  border: none;
+    background-color: #b7b7b7;
+    color: #fff;
+    padding: .6rem 1.5rem;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    margin-right: 1.5rem;
+    letter-spacing: 1px;
+}
+.pts_btnWrap button.pts_submit{
+  background-color: #56a9ff;
+  margin-right: 0;
+}
 
 /* firefox media query */
 @-moz-document url-prefix() {
