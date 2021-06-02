@@ -414,10 +414,10 @@
                     <span class="pl-2 pr-2"><img src="./images/icons/ic-information-docs.svg" alt="ic-information-docs" /></span>
                     Offer Letter
                     <div class="float-right dragged_doc_actions">
-                      <a href="">
+                      <a href="" data-modalName="edit_projectAccept" class="modal_open">
                         <img src="./images/icons/ic-doc-edit.svg" alt="ic-doc-edit" />
                       </a>
-                      <a href="">
+                      <a href="" data-modalName="preview_doc" class="modal_open">
                         <img src="./images/icons/ic-doc-view.svg" alt="ic-doc-view" />
                       </a>
                       <a href="" data-modalName="delete_doc" class="modal_open">
@@ -430,10 +430,10 @@
                     <span class="pl-2 pr-2"><img src="./images/icons/ic-esign-docs.svg" alt="ic-esign-docs" /></span>
                     Project acceptance agreement
                     <div class="float-right dragged_doc_actions">
-                      <a href="">
+                      <a href="" data-modalName="edit_projectAccept" class="modal_open">
                         <img src="./images/icons/ic-doc-edit.svg" alt="ic-doc-edit" />
                       </a>
-                      <a href="">
+                      <a href="" data-modalName="preview_doc" class="modal_open">
                         <img src="./images/icons/ic-doc-view.svg" alt="ic-doc-view" />
                       </a>
                       <a href="" data-modalName="delete_doc" class="modal_open">
@@ -446,10 +446,10 @@
                     <span class="pl-2 pr-2"><img src="./images/icons/ic-esign-docs.svg" alt="ic-esign-docs" /></span>
                     Employment application Form
                     <div class="float-right dragged_doc_actions">
-                      <a href="">
+                      <a href="" data-modalName="edit_projectAccept" class="modal_open">
                         <img src="./images/icons/ic-doc-edit.svg" alt="ic-doc-edit" />
                       </a>
-                      <a href="">
+                      <a href="" data-modalName="preview_doc" class="modal_open">
                         <img src="./images/icons/ic-doc-view.svg" alt="ic-doc-view" />
                       </a>
                       <a href="" data-modalName="delete_doc" class="modal_open">
@@ -492,7 +492,7 @@
                     <span class="pl-2 pr-2"><img src="./images/icons/ic-esign-docs.svg" alt="ic-information-docs" /></span>
                     Federal W4 2021 Form
                     <div class="float-right dragged_doc_actions">
-                      <a href="">
+                      <a href="" data-modalName="preview_doc" class="modal_open">
                         <img src="./images/icons/ic-doc-view.svg" alt="ic-doc-view" />
                       </a>
                       <a href="" data-modalName="delete_doc" class="modal_open">
@@ -535,7 +535,7 @@
                     <span class="pl-2 pr-2"><img src="./images/icons/ic-physical-docs.svg" alt="ic-physical-docs" /></span>
                     Broker Licence Policy Form
                     <div class="float-right dragged_doc_actions">
-                      <a href="">
+                      <a href="" data-modalName="preview_doc" class="modal_open">
                         <img src="./images/icons/ic-doc-view.svg" alt="ic-doc-view" />
                       </a>
                       <a href="" data-modalName="delete_doc" class="modal_open">
@@ -548,7 +548,7 @@
                     <span class="pl-2 pr-2"><img src="./images/icons/ic-physical-docs.svg" alt="ic-physical-docs" /></span>
                     Contact Personnel Background - Finger Priniting Authorization Form
                     <div class="float-right dragged_doc_actions">
-                      <a href="">
+                      <a href="" data-modalName="preview_doc" class="modal_open">
                         <img src="./images/icons/ic-doc-view.svg" alt="ic-doc-view" />
                       </a>
                       <a href="">
@@ -561,7 +561,7 @@
                     <span class="pl-2 pr-2"><img src="./images/icons/ic-physical-docs.svg" alt="ic-physical-docs" /></span>
                     Intern Acknowledgment and Agreement for Contract Assignments
                     <div class="float-right dragged_doc_actions">
-                      <a href="">
+                      <a href="" data-modalName="preview_doc" class="modal_open">
                         <img src="./images/icons/ic-doc-view.svg" alt="ic-doc-view" />
                       </a>
                       <a href="" data-modalName="delete_doc" class="modal_open">
@@ -724,6 +724,51 @@
           <button>Cancel</button>
           <button class="confirm_btn">Confirm</button>
         </div>
+      </div>
+      </div>
+  </div>
+  <div class="custom_modal" id="edit_projectAccept">
+    <div class="custom_modal_wrap">
+      <div class="custom_modal_header">
+        <h5 class="modal-title">Edit Project Acceptance Agreement</h5>
+        <button class="close">
+          <span
+            ><img src="./images/icons/ic-close.svg" alt="ic-close"
+          /></span>
+        </button>
+      </div>
+      <div class="custom_modal_body">
+        <div class="edit_doc_view">
+          <div class="editDoc_wrap">
+            <img src="./images/edit_doc.png" alt="edit_doc" />
+          </div>
+          <div class="editDoc_btns">
+            <button class="prev_btn">Previous</button>
+            <button class="next_btn">Next</button>
+          </div>
+        </div>
+        <div class="pts_btnWrap text-right">
+          <button>Cancel</button>
+          <button class="pts_submit">Update</button>
+        </div>
+      </div>
+      </div>
+  </div>
+  <div class="custom_modal" id="preview_doc">
+    <div class="custom_modal_wrap">
+      <div class="custom_modal_header">
+        <h5 class="modal-title">Preview Offer Letter</h5>
+        <button class="close">
+          <span
+            ><img src="./images/icons/ic-close.svg" alt="ic-close"
+          /></span>
+        </button>
+      </div>
+      <div class="custom_modal_body">
+        <div class="edit_doc_view">
+          <div class="editDoc_wrap">
+            <img src="./images/view_doc.png" alt="view_doc" />
+          </div>
       </div>
       </div>
   </div>
