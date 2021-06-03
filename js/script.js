@@ -6,8 +6,9 @@ $(document).ready(function(){
     $("#"+modal+"").addClass("active");
   })
 
-  $(".custom_modal_header button").click(function(){
-    $(this).parent().parent().parent(".custom_modal").removeClass("active");
+  $(".custom_modal .close").click(function(){
+    console.log("close");
+    $(this).closest(".custom_modal").removeClass("active");
   })
 
   // scroll_actions -active
@@ -15,7 +16,6 @@ $(document).ready(function(){
     $(this).parent().parent().parent(".scroll_actions").toggleClass("active");
   })
 
-  // profile_card_show
   // profile_card_show
   $(".rejected_note").click(function(e){
     e.stopPropagation();
