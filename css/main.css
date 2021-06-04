@@ -492,8 +492,9 @@ input[type="checkbox"] {
   font-size: 16px;
 }
 .draggable_area .scroll_docs {
-  max-height: unset;
-  overflow-y: unset;
+  max-height: 215px;
+  min-height: 215px;
+  overflow-y: auto;
 }
 .draggable_area .scroll_docs ~ .dragAreaText {
   position: unset;
@@ -531,6 +532,7 @@ span.selected_num {
   position: static;
   transform: none;
   margin: .5rem auto 2rem auto;
+  padding: 2rem;
 }
 .draggable_area .selectedDocsBtn_wrap {
   text-align: right;
@@ -578,6 +580,12 @@ span.selected_num {
 }
 .custom_modal_header > .close{
   margin-left: auto;
+}
+.custom_modal_header > .close:hover{
+  opacity: 1;
+}
+.custom_modal_header > .close:hover svg *{
+  fill:#d0021b;
 }
 .dropdown select{
   -webkit-appearance: none;
