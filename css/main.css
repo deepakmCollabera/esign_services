@@ -1099,12 +1099,15 @@ span.selected_num {
   font-weight: 400;
   float: right;
 }
+.editDoc_btns .next_btn:hover svg *{
+  fill: #2069C1;
+}
 
 /* edit_sender */
-#edit_sender .custom_modal_wrap{
+#edit_sender .custom_modal_wrap, #manage_resip .custom_modal_wrap{
   width: 45%;
 }
-#edit_sender .custom_modal_wrap .custom_modal_body{
+#edit_sender .custom_modal_wrap .custom_modal_body, #manage_resip .custom_modal_wrap .custom_modal_body{
   padding: 2rem;
 }
 .edit_sender_table{
@@ -1164,19 +1167,19 @@ span.selected_num {
 .edit_sender_table .est_body_row .est_recip{
   width: 45%;
 }
-#edit_sender .confirmation_btn {
+#edit_sender .confirmation_btn, #manage_resip .confirmation_btn {
   text-align: right;
 }
-#edit_sender .confirmation_btn button {
+#edit_sender .confirmation_btn button,  #manage_resip .confirmation_btn button{
   font-weight: 100 !important;
   font-size: 16px !important;
   text-shadow: none !important;
 }
-#edit_sender .confirmation_btn .confirm_btn {
+#edit_sender .confirmation_btn .confirm_btn, #manage_resip .confirmation_btn .confirm_btn {
   margin-right: 0;
   background-color: #56a9ff;
 }
-#edit_sender .confirmation_btn .close:hover {
+#edit_sender .confirmation_btn .close:hover, #manage_resip .confirmation_btn .close:hover {
   background-color: #b7b7b7;
   color: #fff;
   opacity: 1;
