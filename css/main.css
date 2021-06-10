@@ -803,19 +803,19 @@ span.selected_num {
 .confirmation_modal .custom_modal_wrap {
   width: 35%;
 }
-.confirmation_modal .custom_modal_body {
+.confirmation_modal .custom_modal_body, .notes_modal .custom_modal_body{
   padding: 2rem 1rem 2rem 2rem;
 }
-.confirmation_modal .custom_modal_body > h6 {
+.confirmation_modal .custom_modal_body > h6, .notes_modal .custom_modal_body > h6 {
   margin: 0 0 1rem;
   font-size: 16px;
   font-weight: 500;
   color: #4a4a4a;
 }
-.confirmation_modal .custom_modal_body .confirmation_btn {
+.confirmation_modal .custom_modal_body .confirmation_btn, .notes_modal .custom_modal_body .confirmation_btn {
   text-align: right;
 }
-.confirmation_modal .custom_modal_body .confirmation_btn button {
+.confirmation_modal .custom_modal_body .confirmation_btn button, .notes_modal .custom_modal_body .confirmation_btn button {
   background-color: transparent;
   border: none;
   color: #b7b7b7;
@@ -824,7 +824,7 @@ span.selected_num {
   padding: 0.5rem 1rem;
   margin-right: 1rem;
 }
-.confirmation_modal .custom_modal_body .confirmation_btn .confirm_btn {
+.confirmation_modal .custom_modal_body .confirmation_btn .confirm_btn, .notes_modal .custom_modal_body .confirmation_btn .confirm_btn {
   color: #56a9ff;
   margin-right: 0;
 }
@@ -1064,7 +1064,7 @@ span.selected_num {
   margin-right: 0;
 }
 #edit_projectAccept .custom_modal_wrap,
-#preview_doc .custom_modal_wrap {
+#preview_doc .custom_modal_wrap, #previewFederalForm .custom_modal_wrap {
   width: 50%;
 }
 #edit_projectAccept .custom_modal_body,
@@ -1346,7 +1346,7 @@ span.selected_num {
   left: 10px;
   width: 12px;
   height: 12px;
-  top: 43%;
+  top: 53%;
   transform: translate(0, -50%);
   background-color: #56a9ff;
   border-radius: 50%;
@@ -1371,6 +1371,83 @@ span.selected_num {
 }
 .voided_notes{
   position: relative;
+}
+
+/* email modal */
+#emailWrap .modal-header {
+  border-bottom: 1px solid #979797;
+}
+.email_ttile,
+.email_det {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #979797;
+}
+.email_ttile p {
+  margin: 0;
+  color: #4a4a4a;
+  font-size: 16px;
+  font-weight: 500;
+}
+.email_ttile ul {
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+  width: 20%;
+  margin-bottom: 0;
+}
+.email_ttile ul li {
+  cursor: pointer;
+}
+.mail_details td {
+  font-size: 14px;
+  color: #4a4a4a;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+.mail_details tr td:first-child {
+  width: 20% !important;
+}
+.mail_details td b {
+  font-weight: 500;
+}
+.attachment_details {
+  text-align: right;
+  font-size: 14px;
+  color: #4a4a4a;
+  font-weight: 500;
+  width: fit-content;
+  margin-left: auto;
+}
+.attachment_details img:last-child {
+  margin-left: 40px !important;
+  cursor: pointer;
+}
+.email_subject {
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+  color: #4a4a4a;
+  max-height: 350px;
+  overflow-y: auto;
+}
+.email_subject b {
+  font-weight: 600;
+}
+.custom_modal_body .form_control label{
+  font-size: 14px;
+  font-weight: 400;
+}
+.custom_modal_body .form_control textarea{
+  font-size: 14px;
+  color: #4a4a4a;
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid #e7e7e7;
+  }
+.custom_modal_body .form_control input::placeholder{
+color: #b7b7b7;
+}
+.notes_modal .custom_modal_wrap{
+  width: 45%;
 }
 /* firefox media query */
 @-moz-document url-prefix() {
