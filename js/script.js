@@ -7,7 +7,7 @@ $(document).ready(function(){
   })
 
   $(".custom_modal .close").click(function(){
-    console.log("close");
+    // console.log("close");
     $(this).closest(".custom_modal").removeClass("active");
   })
 
@@ -17,16 +17,16 @@ $(document).ready(function(){
   })
 
   // profile_card_show
-  $(".rejected_note").click(function(e){
+  $(".open_popup").click(function(e){
     e.stopPropagation();
     e.preventDefault();
-    $(this).children(".rejected_note_wrap").toggleClass("active");
+    $(this).children(".action_popup").toggleClass("active");
   });
 
   $(".close_popup").click(function(e){
     e.stopPropagation();
     e.preventDefault();
-    $(this).parent().parent(".rejected_note_wrap").removeClass("active");
+    $(this).parent().parent(".action_popup").removeClass("active");
   })
   
   $(".docs_mainwrap p, .info_table .accordion-toggle").click(function(e){
